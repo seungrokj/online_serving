@@ -1,0 +1,11 @@
+python3 $SCRIPT \
+			--model meta-llama/Meta-Llama-3.1-8B-Instruct \
+			--swap-space 16 \
+			--disable-log-requests \
+			--dtype float16 \
+			--max-model-len 8192 \
+			--tensor-parallel-size 8  \
+			--host 0.0.0.0 \
+			--port 8000 \
+			--num-scheduler-steps 10 \
+			--distributed-executor-backend "mp" 
